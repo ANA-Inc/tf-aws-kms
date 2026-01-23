@@ -1,5 +1,5 @@
 module "ssm" {
-  source = "git::https://github.com/ANA-Inc/terraform-aws-ssm-parameter.git?ref=ff3a868a2f88b9540691daa87670b4422abf0bec"
+  source = "git::https://github.com/ANA-Inc/terraform-aws-ssm-parameter.git?ref=b7a55688745b7820bd6c63d8c6815b1694dff5dd"
 
   name  = coalesce(var.ssm_parameter_name, "/kms/${var.env}/${local.name}")
   value = module.kms.key_id
